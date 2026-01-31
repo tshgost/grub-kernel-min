@@ -1,17 +1,18 @@
 # grub-kernel-min
 
-Um experimento mínimo de boot/kernel para aprender o pipeline de boot (GRUB + assembly + linker script).
+Minimal (WIP) boot/kernel experiment loaded via GRUB, focused on learning:
+- binary layout (linker script)
+- early control flow in assembly
+- the “build → boot → debug” pipeline
 
-> Status: WIP / experimental. A ideia é manter pequeno e didático.
-
-## O que tem aqui
-- `stage2.asm` — estágio/kernel em assembly (WIP)
-- `bot.asm` — rotinas auxiliares (WIP)
-- `linker.ld` — script de link
-- `Makefile` — build
+## Repository contents
+- `stage2.asm` — main stage (WIP)
+- `bot.asm` — helper routines (WIP)
+- `linker.ld` — binary layout/link script
+- `Makefile` — build rules
 
 ## Build
-Use o `Makefile` como fonte de verdade:
+The default target is `make`:
 
 ```bash
 make
